@@ -67,8 +67,39 @@ console.log(binary(29));
 //Animal Hierarchy
 
 //Factorial
+function factorial(n) {
+    //base 
+    if (n === 1) return 1;
+    //recursive
+    return n * factorial(n-1);
+}
+console.log(factorial(5));
 
 //Fibonacci
+function fibonacci(n=n-1) {
+    //base
+    if (n <= 2) return 1;
+    return fibonacci(n-2) + fibonacci(n-1);
+}
+
+console.log(fibonacci(15));
 
 //Organization Chart
 
+const OrgChart = [
+    {id: 'Zuckerberg', 'Parent': null},
+    {id: 'Schroepfer', 'Parent': 'Zuckerberg'},
+    {id: 'Bosworth', 'Parent': 'Schroepfer'},
+    {id: 'Zhao', 'Parent': 'Schroepfer'},
+    {id: 'Steve', 'Parent': 'Bosworth'},
+    {id: 'Richie', 'Parent': 'Zhao'}
+];
+
+function traverse(OrgChart, parent) {
+    let node = {};
+    OrgChart.filter(person => person.Parent === parent)
+            .forEach(person => node[person.id] = traverse(OrgChart, person.id));
+    return node;
+}
+
+console.log(JSON.stringify(traverse(OrgChart, null), null, 2));
