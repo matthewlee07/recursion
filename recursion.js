@@ -52,41 +52,6 @@ function splitString(string, separator) {
 }
 
 // Binary Representation
-// function cutTwos(num) {
-//     if (num === 1) return "1";
-
-//     if (32 < num && num-32 !== 1) {
-//         return "1" + cutTwos(num - 32);
-//     }
-//     if (16 < num && num-16 !== 1) {
-//         return "1" + cutTwos(num - 16);
-//     }
-//     if (8 < num && num-8 !== 1) {
-//         return "1" + cutTwos(num - 8);
-//     }
-//     if (4 < num && num-4 !== 1) {
-//         return "1" + cutTwos(num - 4);
-//     }
-//     if (2 < num && num-2 !== 1) {
-//         return "1" + cutTwos(num - 2);
-//     }
-//     //define case for 0
-//     else {
-//         return "0" + cutTwos(num - 2);
-//     }
-// }
-
-// function binary(num) {
-//     if (num === 1) return 1;
-//     if (128 < num) { return 10000000 + (binary(num - 128)); }
-//     if (64 < num) { return 1000000 + (binary(num - 64)); }
-//     if (32 < num) { return 100000 + (binary(num - 32)); }
-//     if (16 < num) { return 10000 + (binary(num - 16)); }
-//     if (8 < num) { return 1000 + (binary(num - 8)); }
-//     if (4 < num) { return 100 + (binary(num - 4)); }
-//     if (2 < num) { return 10 + (binary(num - 16)); }
-// }
-
 function binary(num) {
     // basecase
     if (num < 1) return '';
@@ -96,6 +61,7 @@ function binary(num) {
 }
 
 console.log(binary(29));
+
 //Anagrams
 
 //Animal Hierarchy
